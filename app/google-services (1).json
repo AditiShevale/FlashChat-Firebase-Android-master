@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "410633514263",
+    "firebase_url": "https://flashchat-d3c45.firebaseio.com",
+    "project_id": "flashchat-d3c45",
+    "storage_bucket": "flashchat-d3c45.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:410633514263:android:dd5838be6221f7e5",
+        "android_client_info": {
+          "package_name": "com.londonappbrewery.starchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "410633514263-9hfenjplo1dgk9un30rmctmu5g8mpc0d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8e1f20CzG7F_Lrap_r8iv9HVcbpBxqsA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
