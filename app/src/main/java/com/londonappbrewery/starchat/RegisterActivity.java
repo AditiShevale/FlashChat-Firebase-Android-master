@@ -10,6 +10,8 @@ import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -25,6 +27,7 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText mConfirmPasswordView;
 
     // Firebase instance variables
+    private FirebaseAuth mAuth;
 
 
 
@@ -111,7 +114,7 @@ public class RegisterActivity extends AppCompatActivity {
         String confirmPassword = mConfirmPasswordView.getText().toString();
 
 
-        return confirmPassword.equals(password);
+        return confirmPassword.equals(password) && password.length()>4;
     }
 
     // TODO: Create a Firebase user
