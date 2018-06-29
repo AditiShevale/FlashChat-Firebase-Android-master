@@ -54,7 +54,7 @@ public class RegisterActivity extends AppCompatActivity {
         });
 
         // TODO: Get hold of an instance of FirebaseAuth
-
+        mAuth= FirebaseAuth.getInstance();
 
     }
 
@@ -101,6 +101,7 @@ public class RegisterActivity extends AppCompatActivity {
         } else {
             // TODO: Call create FirebaseUser() here
 
+
         }
     }
 
@@ -118,7 +119,9 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     // TODO: Create a Firebase user
+    private void createFirebaseUser(){
 
+}
 
     // TODO: Save the display name to Shared Preferences
 
