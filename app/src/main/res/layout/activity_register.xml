@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="25sp"
                 android:hint="@string/prompt_username"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textColorHint="@color/white"
                 android:inputType="textNoSuggestions"
                 android:imeOptions="actionNext"
@@ -47,7 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/prompt_email"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="25sp"
                 android:imeOptions="actionNext"
                 android:textColorHint="@color/white"
@@ -67,7 +67,7 @@
             <EditText
                 android:id="@+id/register_password"
                 android:textSize="25sp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textColorHint="@color/white"
                 android:layout_width="match_parent"
                 android:imeOptions="actionNext"
@@ -87,7 +87,7 @@
 
             <EditText
                 android:id="@+id/register_confirm_password"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="25sp"
                 android:textColorHint="@color/white"
                 android:layout_width="match_parent"
