@@ -3,6 +3,7 @@ package com.londonappbrewery.starchat;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -95,6 +96,14 @@ public class LoginActivity extends AppCompatActivity {
 
     // TODO: Show error on screen with an alert dialog
 
+    private  void showErrorDialog(String message){
+        new AlertDialog.Builder(this)
+                .setTitle("Oops")
+                .setMessage(message)
+                .setPositiveButton(android.R.string.ok,null)
+                .setIcon(android.R  .drawable.ic_dialog_alert)
+                .show();
+    }
 
 
 }
