@@ -83,6 +83,10 @@ public class LoginActivity extends AppCompatActivity {
 
                         if (!task.isSuccessful()){
                             Log.d("Flash Chat","Problem signing in"+task.getException());
+                        }else {
+                            Intent intent = new Intent(LoginActivity.this,MainChatActivity.class);
+                            finish();
+                            startActivity(intent);
                         }
                     }
                 });
