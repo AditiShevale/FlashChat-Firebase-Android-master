@@ -148,7 +148,7 @@ createFirebaseUser();
 
     // TODO: Create an alert dialog to show in case registration failed
 
-
+private void 
 
 
 }
