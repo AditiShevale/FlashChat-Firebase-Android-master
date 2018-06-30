@@ -2,6 +2,7 @@ package com.londonappbrewery.starchat;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
@@ -137,6 +138,7 @@ createFirebaseUser();
 
                         if (!task.isSuccessful()){
                             Log.d("FlashChat","user Creation Failed");
+                            showErrorDialog("Registration Failed");
                         }
                     }
                 });
@@ -149,6 +151,14 @@ createFirebaseUser();
     // TODO: Create an alert dialog to show in case registration failed
 
 
+private  void  showErrorDialog(String message){
 
+        new AlertDialog.Builder(this)
+                .setTitle("Oops")
+                .setMessage(message)
+                .setPositiveButton(android.R.string.ok,null)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+        .show();
+}
 
 }
