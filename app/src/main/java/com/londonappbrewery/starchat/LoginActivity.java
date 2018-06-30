@@ -55,6 +55,7 @@ public class LoginActivity extends AppCompatActivity {
     // Executed when Sign in button pressed
     public void signInExistingUser(View v)   {
         // TODO: Call attemptLogin() here
+        attemptLogin();
 
     }
 
