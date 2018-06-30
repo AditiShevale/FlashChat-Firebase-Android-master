@@ -1,5 +1,7 @@
 package com.londonappbrewery.starchat;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
@@ -139,6 +141,13 @@ createFirebaseUser();
                         if (!task.isSuccessful()){
                             Log.d("FlashChat","user Creation Failed");
                             showErrorDialog("Registration Failed");
+                        }else {
+                            saveDisplayName();
+                            Intent intent =
+                                    new Intent(RegisterActivity.this,
+                                            LoginActivity.class);
+                            finish();
+                            startActivity(intent);
                         }
                     }
                 });
@@ -146,7 +155,11 @@ createFirebaseUser();
 }
 
     // TODO: Save the display name to Shared Preferences
-
+    private  void saveDisplayName(){
+        String displayname = mUsernameView.getText().toString();
+        SharedPreferences prefs = getSharedPreferences(CHAT_PREFS,0);
+        prefs.edit().putString(DISPLAY_NAME_KEY,displayname).apply();
+    }
 
     // TODO: Create an alert dialog to show in case registration failed
 
