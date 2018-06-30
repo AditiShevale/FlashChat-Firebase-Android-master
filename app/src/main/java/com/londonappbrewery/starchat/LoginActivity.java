@@ -97,6 +97,7 @@ public class LoginActivity extends AppCompatActivity {
     // TODO: Show error on screen with an alert dialog
 
     private  void showErrorDialog(String message){
+
         new AlertDialog.Builder(this)
                 .setTitle("Oops")
                 .setMessage(message)
