@@ -12,6 +12,7 @@ import com.google.firebase.database.DatabaseReference;
 import java.util.ArrayList;
 
 public class ChatListAdapter extends BaseAdapter {
+
     private Activity mActivity;
     private DatabaseReference mDatabaseReference;
     private String mDisplayName;
