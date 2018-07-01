@@ -5,6 +5,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
@@ -26,6 +28,12 @@ public class ChatListAdapter extends BaseAdapter {
 
     }
 
+    static  class ViewHolder{
+
+        TextView authorname;
+        TextView body;
+        LinearLayout.LayoutParams params;
+    }
 
     @Override
     public int getCount() {
