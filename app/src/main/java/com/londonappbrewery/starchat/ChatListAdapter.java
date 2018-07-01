@@ -18,6 +18,15 @@ public class ChatListAdapter extends BaseAdapter {
     private String mDisplayName;
     private ArrayList<DataSnapshot> mSnapshotList;
 
+    public ChatListAdapter(Activity activity, DatabaseReference ref, String name){
+        mActivity= activity;
+        mDisplayName =name;
+        mDatabaseReference = ref.child("messages");
+        mSnapshotList = new ArrayList<>();
+
+    }
+
+
     @Override
     public int getCount() {
         return 0;
