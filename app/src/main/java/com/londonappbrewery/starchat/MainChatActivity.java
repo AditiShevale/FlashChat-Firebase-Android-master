@@ -71,7 +71,13 @@ mSendButton.setOnClickListener(new View.OnClickListener() {
     private void sendMessage() {
         Log.d("FlashChat","I sent Something");
         // TODO: Grab the text the user typed in and push the message to Firebase
+        String input = mInputText.getText().toString();
+        if (!input.equals("")){
+            InstantMessage chat = new InstantMessage(input,mDisplayName);
+            mDatabasereference.child("message").push().setValue(chat);
+            mInputText.setText("");
 
+        }
     }
 
     // TODO: Override the onStart() lifecycle method. Setup the adapter here.
