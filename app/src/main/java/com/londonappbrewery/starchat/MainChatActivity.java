@@ -7,6 +7,8 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
+import com.google.firebase.database.DatabaseReference;
+
 
 public class MainChatActivity extends AppCompatActivity {
 
@@ -15,6 +17,7 @@ public class MainChatActivity extends AppCompatActivity {
     private ListView mChatListView;
     private EditText mInputText;
     private ImageButton mSendButton;
+    private DatabaseReference mDatabasereference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
