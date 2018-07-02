@@ -61,9 +61,11 @@ public class LoginActivity extends AppCompatActivity {
 
     // Executed when Register button pressed
     public void registerNewUser(View v) {
+
         Intent intent = new Intent(this, com.londonappbrewery.starchat.RegisterActivity.class);
         finish();
         startActivity(intent);
+
     }
 
     // TODO: Complete the attemptLogin() method
@@ -71,10 +73,11 @@ public class LoginActivity extends AppCompatActivity {
 
 
         // TODO: Use FirebaseAuth to sign in with email & password
+
         String email = mEmailView.getText().toString();
         String password = mPasswordView.getText().toString();
 
-        if( email.equals("") || password.equals("")) return;
+        if(email.equals("") || password.equals("")) return;
         Toast.makeText(this, "Login in Progress", Toast.LENGTH_SHORT).show();
 
         mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(this,
