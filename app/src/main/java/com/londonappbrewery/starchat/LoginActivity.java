@@ -48,7 +48,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        // TODO: Grab an instance of FirebaseAuth
+        // TODO: Grab an instance of FireBaseAuth
         mAuth = FirebaseAuth.getInstance();
     }
 
