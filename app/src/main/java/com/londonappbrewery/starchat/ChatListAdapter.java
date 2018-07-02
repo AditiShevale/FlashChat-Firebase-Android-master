@@ -58,6 +58,12 @@ public class ChatListAdapter extends BaseAdapter {
         if (convertView == null){
             LayoutInflater inflater = (LayoutInflater)mActivity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView=inflater.inflate(R.layout.chat_msg_row,parent,false);
+
+            final  ViewHolder holder = new ViewHolder();
+            holder.authorname = (TextView) convertView.findViewById(R.id.author);
+            holder.body=(TextView)convertView.findViewById(R.id.message);
+            holder.params=(LinearLayout.LayoutParams)holder.authorname.getLayoutParams();
+
         }
         return convertView;
     }
