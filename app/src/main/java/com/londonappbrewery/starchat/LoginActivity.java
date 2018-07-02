@@ -50,6 +50,7 @@ public class LoginActivity extends AppCompatActivity {
 
         // TODO: Grab an instance of FireBaseAuth
         mAuth = FirebaseAuth.getInstance();
+//        mAuth =FirebaseAuth.getInstance().tostring();
     }
 
     // Executed when Sign in button pressed
