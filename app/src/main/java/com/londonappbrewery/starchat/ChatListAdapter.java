@@ -118,4 +118,10 @@ public class ChatListAdapter extends BaseAdapter {
 
         return convertView;
     }
+
+    public void cleanup(){
+        mDatabaseReference.removeEventListener(mListener);
+    }
+
+
 }
