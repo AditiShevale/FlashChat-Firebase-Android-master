@@ -75,7 +75,7 @@ public class ChatListAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return 0;
+        return mSnapshotList.size();
     }
 
     @Override
