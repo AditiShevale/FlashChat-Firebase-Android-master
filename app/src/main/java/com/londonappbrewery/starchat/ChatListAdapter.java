@@ -43,7 +43,7 @@ public class ChatListAdapter extends BaseAdapter {
     }
 
     @Override
-    public Object getItem(int position) {
+    public InstantMessage getItem(int position) {
         return null;
     }
 
@@ -63,8 +63,21 @@ public class ChatListAdapter extends BaseAdapter {
             holder.authorname = (TextView) convertView.findViewById(R.id.author);
             holder.body=(TextView)convertView.findViewById(R.id.message);
             holder.params=(LinearLayout.LayoutParams)holder.authorname.getLayoutParams();
-
+            convertView.setTag(holder);
         }
+            // get Current Position in the list
+
+        final InstantMessage message = getItem(position);
+        final ViewHolder holder = (ViewHolder)convertView.getTag();
+
+        String author = message.getAuthor();
+        holder.authorname.setText(author);
+
+
+        String msg = message.getMessage();
+        holder.body.setText(msg);
+
+
         return convertView;
     }
 }
