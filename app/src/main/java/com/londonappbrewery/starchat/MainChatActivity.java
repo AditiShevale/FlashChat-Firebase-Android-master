@@ -77,7 +77,7 @@ mSendButton.setOnClickListener(new View.OnClickListener() {
         Toast.makeText(this, "Message Sent", Toast.LENGTH_SHORT).show();
         if (!input.equals("")){
             InstantMessage chat = new InstantMessage(input,mDisplayName);
-            mDatabasereference.child("message").push().setValue(chat);
+            mDatabasereference.child("messages").push().setValue(chat);
             mInputText.setText("");
 
         }
