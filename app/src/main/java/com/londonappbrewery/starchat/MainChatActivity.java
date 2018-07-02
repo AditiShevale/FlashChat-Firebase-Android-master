@@ -99,6 +99,7 @@ mSendButton.setOnClickListener(new View.OnClickListener() {
         super.onStop();
 
         // TODO: Remove the Firebase event listener on the adapter.
+        mAdapter.cleanup();
 
     }
 
