@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -72,6 +73,7 @@ mSendButton.setOnClickListener(new View.OnClickListener() {
         Log.d("FlashChat","I sent Something");
         // TODO: Grab the text the user typed in and push the message to Firebase
         String input = mInputText.getText().toString();
+        Toast.makeText(this, "Message Sent", Toast.LENGTH_SHORT).show();
         if (!input.equals("")){
             InstantMessage chat = new InstantMessage(input,mDisplayName);
             mDatabasereference.child("message").push().setValue(chat);
@@ -79,6 +81,7 @@ mSendButton.setOnClickListener(new View.OnClickListener() {
 
         }
     }
+
 
     // TODO: Override the onStart() lifecycle method. Setup the adapter here.
 
