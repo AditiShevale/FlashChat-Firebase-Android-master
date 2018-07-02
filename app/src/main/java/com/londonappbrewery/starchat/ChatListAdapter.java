@@ -59,14 +59,14 @@ public class ChatListAdapter extends BaseAdapter {
 
     public ChatListAdapter(Activity activity, DatabaseReference ref, String name){
         mActivity= activity;
-        mDisplayName =name;
+        mDisplayName = name;
         mDatabaseReference = ref.child("messages");
         mDatabaseReference.addChildEventListener(mListener);
         mSnapshotList = new ArrayList<>();
 
     }
 
-    static  class ViewHolder{
+    private static  class ViewHolder{
 
         TextView authorname;
         TextView body;
